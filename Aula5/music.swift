@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct music: View {
-    var song: Song
+  @State var song: Song
     
     var body: some View {
         VStack{
-            Image(song.capa)
+            Image(song.name)
                 .resizable()
                 .frame(width: 100, height: 100)
         }
@@ -21,5 +21,5 @@ struct music: View {
 }
 
 #Preview {
-    music()
+    music(song: Song(id: 1, name: "hoje", artist: "aqui"))
 }
